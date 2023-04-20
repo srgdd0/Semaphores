@@ -3,7 +3,7 @@ using System.Threading;
 
 class Program
 {
-    static SemaphoreSlim semaphore = new SemaphoreSlim(3); // create a new SemaphoreSlim object with an initial count of 3
+    static SemaphoreSlim semaphore = new SemaphoreSlim(1); // create a new SemaphoreSlim object with an initial count of 1
 
     static void Main()
     {

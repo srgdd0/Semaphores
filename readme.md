@@ -8,7 +8,7 @@ using System.Threading;
 
 class Program
 {
-    static SemaphoreSlim semaphore = new SemaphoreSlim(3); // create a new SemaphoreSlim object with an initial count of 3
+    static SemaphoreSlim semaphore = new SemaphoreSlim(1); // create a new SemaphoreSlim object with an initial count of 1
 
     static void Main()
     {
@@ -35,7 +35,7 @@ class Program
 
 i use the SemaphoreSlim class from the System.Threading namespace to limit the number of threads that can enter a critical section of code at the same time.  
 
-i create a new SemaphoreSlim object with an initial count of 3, meaning that at most 3 threads can enter the critical section simultaneously.
+i create a new SemaphoreSlim object with an initial count of 1, meaning that at most 3 threads can enter the critical section simultaneously.
 
 Each thread in the program calls the "Enter" method, which prints a message indicating that it is waiting to enter the critical section, acquires the semaphore, performs some work, and then releases the semaphore before exiting.  
 
